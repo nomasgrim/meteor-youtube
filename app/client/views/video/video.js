@@ -35,6 +35,7 @@ if (Meteor.isClient) {
     var videoId = $('#player').data('videoid');
     console.log('player ready');
     view.player = new YT.Player('player', {
+      // autoplay: 0,
       height: '390',
       width: '640',
       videoId: videoId,
@@ -45,7 +46,7 @@ if (Meteor.isClient) {
   }
 
   Template.video.onPlayerReady = function(event) {
-    event.target.playVideo();
+    //event.target.playVideo();
   }
 
 }

@@ -28,7 +28,8 @@ if (Meteor.isClient) {
   search = function(queryString){
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
-        q: queryString
+        q: queryString,
+        maxResults: 50
     });
     
     request.execute(onSearchResponse);
