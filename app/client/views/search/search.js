@@ -14,8 +14,14 @@ if (Meteor.isClient) {
         var view = event.target;
         var queryString = view.videoSearch.value;
         search(queryString);
-
         return false;
+    },
+    'click li' : function(event) {
+      event.preventDefault();
+      var view = event.target;
+      var itemClicked = TmpSearch._collection.findOne(this._id);
+      Session.set('currentId',this._id)
+      UI.render(Template.video,document.body);
     }
   });
 
@@ -32,20 +38,10 @@ if (Meteor.isClient) {
     var responseString = JSON.stringify(response, '', 2);
     var respData = JSON.parse(responseString);
     var data = respData.items;
-    // var key;
-    // var newArr = new Array();
-    // for(key in data) {
-    //   ///renameProperty(key, 'name');
-    //   console.log(key);
-    //   newArr['name'] = data[key];
-    //   newArr.push(newArr['name']);
-    // }
-    // console.log(newArr);
-    console.log('data',data);
-    //tmpSearch.remove({});
+
+
     TmpSearch._collection.remove({});
     for (var i = 0; i < data.length; i++){
-      console.log(data[i]);
       TmpSearch._collection.insert(data[i]);
     }
 
