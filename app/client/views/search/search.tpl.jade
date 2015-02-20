@@ -1,0 +1,20 @@
+#search-container
+  form.searchForm
+    .pure-g
+      .pure-u-11-12
+        label Search
+        input.video-search(name="videoSearch")
+      .pure-u-1-12
+        input(type="submit",value="Search")
+
+#response
+  each searchResults
+    ul
+      li Video Id:
+        | {{this.id.videoId}}
+      li Title:
+        | {{this.snippet.title}}
+      li description:
+        | {{this.snippet.description}}
+      li
+        img(src="{{this.snippet.thumbnails.high.url}}")
