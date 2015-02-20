@@ -1,3 +1,40 @@
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-item {
+  padding-bottom: 18.65%;
+  height: 0;
+  overflow:hidden;
+  &__thumbnail {
+    position: relative;
+    align-items: center;
+    display: flex;
+    img {
+      width: 100%;
+    }
+  }
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    background: rgba(61, 179, 255, 0.7);
+    height: 100%;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+  }
+  &__thumbnail {
+    &:hover {
+      .search-item__content {
+        display: block;
+      }
+    }
+  }
+  &__padded-container {
+    padding: 10px;
+  }
 }

@@ -8,13 +8,13 @@
         input(type="submit",value="Search")
 
 #response
-  each searchResults
-    ul
-      li Video Id:
-        | {{this.id.videoId}}
-      li Title:
-        | {{this.snippet.title}}
-      li description:
-        | {{this.snippet.description}}
-      li
-        img(src="{{this.snippet.thumbnails.high.url}}")
+  .pure-g.ai-center  
+    each searchResults
+      .pure-u-1-4.search-item.ai-center
+        .search-item__thumbnail
+          img(src="{{this.snippet.thumbnails.high.url}}")
+          .search-item__content
+            .search-item__padded-container
+              h2 {{this.snippet.title}}
+              p {{this.snippet.description}}
+          

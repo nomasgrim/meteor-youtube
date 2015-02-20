@@ -16,7 +16,7 @@ if (Meteor.isClient) {
         search(queryString);
         return false;
     },
-    'click li' : function(event) {
+    'click .search-item' : function(event) {
       event.preventDefault();
       var view = event.target;
       var itemClicked = TmpSearch._collection.findOne(this._id);
@@ -45,7 +45,7 @@ if (Meteor.isClient) {
     for (var i = 0; i < data.length; i++){
       TmpSearch._collection.insert(data[i]);
     }
-
+    console.log(data);
     Session.set("searchResponseData",data);
   }
 

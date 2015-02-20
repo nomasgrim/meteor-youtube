@@ -1,7 +1,17 @@
+html, body {
+  height: 100%;
+}
+
 body {
   background: #e0e0e0;
 }
 
+h2 {
+  font-size: 1.25vw;
+}
+p {
+  font-size: 1vw;
+}
 .blkblnkt {
   position: fixed;
   top: 0;
@@ -10,4 +20,8 @@ body {
   height: 100%;
   background: rgba(0,0,0,.7);
   color: #fff;
+}
+
+.ai-center {
+  align-items: center;
 }
