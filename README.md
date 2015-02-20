@@ -2,7 +2,8 @@
 using meteor to create custom youtube experience
 
 * meteor
-* youtube
+* youtube API
+* youtube Player
 
 # To run locally
 From command line
