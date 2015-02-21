@@ -13,7 +13,7 @@ if (Meteor.isClient) {
         event.preventDefault();
         var view = event.target;
         var queryString = view.videoSearch.value;
-        search(queryString);
+        searchYT(queryString);
         return false;
     },
     'click .search-item' : function(event) {
@@ -26,7 +26,7 @@ if (Meteor.isClient) {
   });
 
   //angular'ish version of controller
-  search = function(queryString){
+  searchYT = function(queryString){
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
         q: queryString,

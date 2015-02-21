@@ -1,9 +1,11 @@
 ## Meteor Youtube Experience
 using meteor to create a customizable youtube experience
 
-* meteor
-* youtube API
-* youtube Player
+* [Meteor](http://docs.meteor.com/#/basic/)
+* [YouTube Data Api v3](https://developers.google.com/youtube/v3/)
+* [YouTube iframe Api](https://developers.google.com/youtube/iframe_api_reference)
+* [Jade](http://jade-lang.com/reference/)
+* [Sass](http://sass-lang.com/guide)
 
 ## To run locally
 From command line
@@ -21,7 +23,9 @@ From command line
 * mquandalle:jade    0.4.1  Jade template language
 * particle4dev:sass  1.2.0  SASS for meteor
 
-## Contributer welcome
+## Contributer's welcome
 A [trello board](https://trello.com/b/0MHx1YAB/meteor-youtube) is being used to list out all the ideal features and tasks for the development of this project.
 
-### cliff.barendsen@gmail.com
+[VIEW PROJECT](meteor-youtube.meteor.com)
+
+### [cliff.barendsen@gmail.com](mailto:cliff.barendsen@gmail.com)
