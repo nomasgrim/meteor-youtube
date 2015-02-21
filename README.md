@@ -26,6 +26,6 @@ From command line
 ## Contributer's welcome
 A [trello board](https://trello.com/b/0MHx1YAB/meteor-youtube) is being used to list out all the ideal features and tasks for the development of this project.
 
-[VIEW PROJECT](meteor-youtube.meteor.com)
+[VIEW PROJECT](http://meteor-youtube.meteor.com)
 
 ### [cliff.barendsen@gmail.com](mailto:cliff.barendsen@gmail.com)
