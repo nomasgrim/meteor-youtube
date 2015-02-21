@@ -21,20 +21,27 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    display: none;
-    background: rgba(61, 179, 255, 0.7);
+    opacity: 0;
+    background: rgba(61,179,255,0.7);
     height: 100%;
     color: #fff;
     text-shadow: 1px 1px 1px #000;
+    transition: all ease-in .15s;
+  }
+  &__details {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,.7);
+    width: 100%;
+    h2 {
+      margin: 10px;
+    }
   }
   &__thumbnail {
     &:hover {
       .search-item__content {
-        display: block;
+        opacity: 1;
       }
     }
-  }
-  &__padded-container {
-    padding: 10px;
   }
 }

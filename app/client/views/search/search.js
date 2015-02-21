@@ -25,6 +25,7 @@ if (Meteor.isClient) {
     }
   });
 
+  //angular'ish version of controller
   search = function(queryString){
     var request = gapi.client.youtube.search.list({
         part: 'snippet',

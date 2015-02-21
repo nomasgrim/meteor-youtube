@@ -7,14 +7,13 @@
       .pure-u-1-12
         input(type="submit",value="Search")
 
-#response
+#response-container
   .pure-g.ai-center  
     each searchResults
       .pure-u-1-4.search-item.ai-center
         .search-item__thumbnail
           img(src="{{this.snippet.thumbnails.high.url}}")
           .search-item__content
-            .search-item__padded-container
+            .search-item__details
               h2 {{this.snippet.title}}
-              p {{this.snippet.description}}
-          
+              //p {{this.snippet.description}}
