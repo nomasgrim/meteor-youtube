@@ -14,7 +14,16 @@ From command line
 Go to dir /app
 
 From command line
-> meteor
+> $ meteor
+
+App will say there's errors. Stop meteor. (control + c on mac while in terminal still)
+Run meteor again
+> $ meteor
+
+## Important Note - Reason for error (Bourbon)
+Because Meteor will attempt to compile you app's local stylesheets prior to copying the server assets directory, the first time you run the app after installing the package your app will complain that it is unable to find it. For the moment this can be resolved by either stopping and restarting the app, at which point you should no longer get this error message, our running touch on you local stylesheet thats attempting to access the package, triggering a reload.
+
+Again, you shouldn't have this error after your first time. Remember, run meteor, stop meteor, run meteor again.
 
 ## Packages included
 * autopublish      1.0.2  Publish the entire database to all clients
