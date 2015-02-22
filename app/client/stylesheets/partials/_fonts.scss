@@ -1,0 +1,39 @@
+//BOLD
+@font-face {
+    font-family: 'os_bold';
+    src: url('/fonts/bold/OpenSans-Bold-webfont.eot');
+    src: url('/fonts/bold/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/bold/OpenSans-Bold-webfont.woff') format('woff'),
+         url('/fonts/bold/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('/fonts/bold/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//REGULAR
+@font-face {
+    font-family: 'os_regular';
+    src: url('/fonts/regular/OpenSans-Regular-webfont.eot');
+    src: url('/fonts/regular/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/regular/OpenSans-Regular-webfont.woff') format('woff'),
+         url('/fonts/regular/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('/fonts/regular/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//LIGHT
+@font-face {
+    font-family: 'os_light';
+    src: url('/fonts/light/OpenSans-Light-webfont.eot');
+    src: url('/fonts/light/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/light/OpenSans-Light-webfont.woff') format('woff'),
+         url('/fonts/light/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('/fonts/light/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-light : 'os_light', sans-serif;
+$font-regular : 'os_regular', sans-serif;
+$font-bold : 'os_bold', sans-serif;

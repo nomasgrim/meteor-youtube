@@ -43,6 +43,7 @@ Again, you shouldn't have this error after your first time. Remember, run meteor
 * [mquandalle:jade](https://github.com/mquandalle/meteor-jade/)  0.4.1  Jade template language
 * [fourseven:scss](https://github.com/fourseven/meteor-scss)   2.0.0_1  Style with attitude. Sass and SCSS support for Meteor.js (with autoprefixer and sourcemaps).
 * [wolves:bourbon](https://github.com/wolvesio/meteor-bourbon/)   1.0.0  Meteor 0.9.3+ - Bourbon is a simple and lightweight mixin library for Sass.
+* [reywood:font-awesome-sass](https://github.com/reywood/meteor-font-awesome-sass)                 4.2.2  Font Awesome stylesheets in SCSS format
 
 
 ## Contributer's welcome

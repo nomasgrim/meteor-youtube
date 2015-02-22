@@ -1,24 +1,49 @@
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-
 .search-item {
+  // transition: width .5s $ease-in-out-sine;
   padding-bottom: 14.0625%;
   height: 0;
   height: 0;
-  overflow:hidden;
   position: relative;
-  &:hover {
-    .search-item__content {
-      opacity: 1;
-    }
-  }
   &__thumbnail {
     position: relative;
-    align-items: center;
-    display: flex;
+    overflow:hidden;
+    z-index: 5;
     img {
       width: 100%;
       margin-top: -9.355%
@@ -26,24 +51,93 @@ ul {
   }
   &__content {
     position: absolute;
+    z-index: 10;
     top: 0;
-    left: 0;
+    left: 100%;
     width: 100%;
-    height: 0;
-    padding-bottom: 56%;
+    height: 200%;
     opacity: 0;
-    background: rgba(61,179,255,0.7);
+    display: none;
+    //background: rgba(61,179,255,0.7);
+    background: rgba(255,223,102,0.25);
+    background: -moz-linear-gradient(top, rgba(255,223,102,0.25) 0%, rgba(241,231,103,0.74) 54%, rgba(0,53,105,0.75) 55%, rgba(0,39,76,0.75) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,223,102,0.25)), color-stop(54%, rgba(241,231,103,0.74)), color-stop(55%, rgba(0,53,105,0.75)), color-stop(100%, rgba(0,39,76,0.75)));
+    background: -webkit-linear-gradient(top, rgba(255,223,102,0.25) 0%, rgba(241,231,103,0.74) 54%, rgba(0,53,105,0.75) 55%, rgba(0,39,76,0.75) 100%);
+    background: -o-linear-gradient(top, rgba(255,223,102,0.25) 0%, rgba(241,231,103,0.74) 54%, rgba(0,53,105,0.75) 55%, rgba(0,39,76,0.75) 100%);
+    background: -ms-linear-gradient(top, rgba(255,223,102,0.25) 0%, rgba(241,231,103,0.74) 54%, rgba(0,53,105,0.75) 55%, rgba(0,39,76,0.75) 100%);
+    background: linear-gradient(to bottom, rgba(255,223,102,0.25) 0%, rgba(241,231,103,0.74) 54%, rgba(0,53,105,0.75) 55%, rgba(0,39,76,0.75) 100%);
     color: #fff;
     text-shadow: 1px 1px 1px #000;
-    transition: all ease-in .15s;
+    // transition: all ease-in .15s;
+  }
+  @include xsm-vp {
+    &:nth-child(1n+0) {
+      .search-item__content {
+        left: 0;
+        //right: 100%;
+      }
+    }
+  }
+  @include sm-vp {
+    &:nth-child(2n+0) {
+      .search-item__content {
+        left: -100% !important;
+        //right: 100%;
+      }
+    }
+  }
+  @include md-vp {
+    &:nth-child(3n+0) {
+      .search-item__content {
+        left: -100% !important;
+        //right: 100%;
+      }
+    }
+  }
+  @include lg-vp {
+    &:nth-child(4n+0) {
+      .search-item__content {
+        left: -100% !important;
+        //right: 100%;
+      }
+    }
+  }
+  &:hover {
+    .search-item__content {
+      display: block;
+      opacity: 1;
+      @include animation('fadeThisIn .5s');
+      &:hover {
+        display: none;
+        opacity: 0;
+      }
+    }
   }
   &__details {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0,0,0,.7);
-    width: 100%;
     h2 {
       margin: 10px;
     }
   }
 }
+
+@include keyframes(fadeThisIn) {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@include keyframes(fadeThisOut) {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+

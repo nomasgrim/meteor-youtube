@@ -1,0 +1,35 @@
+$mq-xsm : 320px !default;
+$mq-sm   : 35.5em !default;
+$mq-md  : 48em !default;
+$mq-lg   : 64em !default;
+$mq-xl  : 80em !default;
+
+// Both portrait and landscape
+
+@mixin xsm-vp {
+  @media screen and (max-width: $mq-xsm) {
+    @content;
+  }
+}
+
+@mixin sm-vp {
+  @media screen and (max-width : $mq-md) and (min-width : $mq-sm) {
+    @content;
+  }
+}
+
+@mixin md-vp {
+  @media screen and (max-width : $mq-lg) and (min-width : $mq-md) {
+    @content;
+  }
+}
+@mixin lg-vp {
+  @media screen and (max-width : $mq-xl) and (min-width : $mq-lg) {
+    @content;
+  }
+}
+@mixin xl-vp {
+  @media screen and (min-width : $mq-xl){
+    @content;
+  }
+}

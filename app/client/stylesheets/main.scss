@@ -1,6 +1,16 @@
+//- Fonts
+@import "partials/fonts";
+
+//- font awesome
+@import '.meteor/local/build/programs/server/assets/packages/reywood_font-awesome-sass/font-awesome';
+
+
 @import "bourbon/bourbon";
 @import "vendor/pure/pure";
 @import "vendor/pure/grids-responsive";
 
+@import "partials/mobile";
+@import "partials/vars";
 @import "partials/base";
+@import "partials/menu";
 @import "modules/search";
