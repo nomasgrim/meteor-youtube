@@ -9,6 +9,12 @@ ul {
   height: 0;
   height: 0;
   overflow:hidden;
+  position: relative;
+  &:hover {
+    .search-item__content {
+      opacity: 1;
+    }
+  }
   &__thumbnail {
     position: relative;
     align-items: center;
@@ -38,13 +44,6 @@ ul {
     width: 100%;
     h2 {
       margin: 10px;
-    }
-  }
-  &__thumbnail {
-    &:hover {
-      .search-item__content {
-        opacity: 1;
-      }
     }
   }
 }

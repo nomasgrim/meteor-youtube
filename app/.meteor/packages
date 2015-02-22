@@ -8,4 +8,5 @@ meteor-platform
 autopublish
 insecure
 mquandalle:jade
-particle4dev:sass
+fourseven:scss
+wolves:bourbon

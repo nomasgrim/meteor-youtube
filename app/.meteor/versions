@@ -13,6 +13,7 @@ deps@1.0.6
 ejson@1.0.5
 fastclick@1.0.2
 follower-livedata@1.0.3
+fourseven:scss@2.0.0_1
 geojson-utils@1.0.2
 html-tools@1.0.3
 htmljs@1.0.3
@@ -33,7 +34,6 @@ mongo@1.0.11
 mquandalle:jade@0.4.1
 observe-sequence@1.0.4
 ordered-dict@1.0.2
-particle4dev:sass@1.2.0
 random@1.0.2
 reactive-dict@1.0.5
 reactive-var@1.0.4
@@ -50,3 +50,4 @@ underscore@1.0.2
 url@1.0.3
 webapp@1.1.6
 webapp-hashing@1.0.2
+wolves:bourbon@1.0.0
