@@ -26,6 +26,16 @@ Because Meteor will attempt to compile you app's local stylesheets prior to copy
 
 Again, you shouldn't have this error after your first time. Remember, run meteor, stop meteor, run meteor again.
 
+## Another Note - Cordova has issues with old plugin registries
+> to fix this issue i had to add additional cordova apache plugins according to the issue board on meteor [here](https://github.com/meteor/meteor/issues/3726)
+* meteor add cordova:org.apache.cordova.console@0.2.13
+* meteor add cordova:org.apache.cordova.file@1.3.3
+* meteor add cordova:org.apache.cordova.file-transfer@0.5.0
+* meteor add cordova:org.apache.cordova.device@0.3.0
+* meteor add cordova:org.apache.cordova.statusbar@0.1.10
+* meteor add cordova:org.apache.cordova.splashscreen@1.0.0
+* meteor add cordova:org.apache.cordova.inappbrowser@0.6.0
+
 ## Packages included
 * autopublish      1.0.2  Publish the entire database to all clients
 * insecure         1.0.2  Allow all database writes by default
