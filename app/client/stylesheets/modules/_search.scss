@@ -57,6 +57,8 @@ ul {
     position: relative;
     overflow:hidden;
     z-index: 5;
+    padding-bottom: 56.25%;
+    height: 0;
     img {
       width: 100%;
       margin-top: -9.355%;
@@ -64,9 +66,12 @@ ul {
   }
 }
 .search-item {
+  .padded-container {
+    padding: 10px 0px 10px 10px;
+  }
   &__content {
     border-radius: 10px 10px 10px 10px;
-    // border: 3px solid $yellow-dark;
+    border: 3px solid $yellow-dark;
     position: absolute;
     z-index: 10;
     top: 0;
@@ -95,17 +100,20 @@ ul {
     }
   }
   @include xsm-vp {
-    &:nth-child(1n+0) {
+    &:nth-child(n) {
+      .padded-container {
+        padding: 10px 10px 10px 10px;
+      }
       .search-item__content {
-        left: 0;
+        left: 0 !important;
         &::before {
           content:"\A";
           border-style: solid;
           border-width: 20px 0 20px 25px;
           border-color: transparent transparent transparent #fff;
           position: absolute;
-          right: -25px;
           left: auto;
+          right: -25px;
           top: 10%;
         }
       }
@@ -113,6 +121,9 @@ ul {
   }
   @include sm-vp {
     &:nth-child(2n+0) {
+      .padded-container {
+        padding: 10px 10px 10px 10px;
+      }
       .search-item__content {
         left: -100% !important;
         &::before {
@@ -130,14 +141,9 @@ ul {
   }
   @include md-vp {
     &:nth-child(3n+0) {
-      .search-item__content {
-        left: -100% !important;
-        //right: 100%;
+      .padded-container {
+        padding: 10px 10px 10px 10px;
       }
-    }
-  }
-  @include lg-vp {
-    &:nth-child(4n+0) {
       .search-item__content {
         left: -100% !important;
         &::before {
@@ -150,7 +156,46 @@ ul {
           right: -25px;
           top: 10%;
         }
-        //right: 100%;
+      }
+    }
+  }
+  @include lg-vp {
+    &:nth-child(4n+0) {
+      .padded-container {
+        padding: 10px 10px 10px 10px;
+      }
+      .search-item__content {
+        left: -100% !important;
+        &::before {
+          content:"\A";
+          border-style: solid;
+          border-width: 20px 0 20px 25px;
+          border-color: transparent transparent transparent #fff;
+          position: absolute;
+          left: auto;
+          right: -25px;
+          top: 10%;
+        }
+      }
+    }
+  }
+  @include xl-vp {
+    &:nth-child(4n+0) {
+      .padded-container {
+        padding: 10px 10px 10px 10px;
+      }
+      .search-item__content {
+        left: -100% !important;
+        &::before {
+          content:"\A";
+          border-style: solid;
+          border-width: 20px 0 20px 25px;
+          border-color: transparent transparent transparent #fff;
+          position: absolute;
+          left: auto;
+          right: -25px;
+          top: 10%;
+        }
       }
     }
   }

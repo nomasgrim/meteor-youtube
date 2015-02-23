@@ -11,9 +11,10 @@
   .pure-g.ai-center  
     each searchResults
       .pure-u-1.pure-u-sm-1-2.pure-u-md-1-3.pure-u-lg-1-4.search-item.ai-center
-        .search-item__thumbnail
-          img(src="{{this.snippet.thumbnails.high.url}}")
-        .search-item__content
-          .search-item__details
-            h2 {{this.snippet.title}}
-            p {{this.snippet.description}}
+        .padded-container
+          .search-item__thumbnail
+            img(src="{{this.snippet.thumbnails.high.url}}")
+          .search-item__content
+            .search-item__details
+              h2 {{this.snippet.title}}
+              p {{this.snippet.description}}
