@@ -1,0 +1,21 @@
+iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.player-container {
+  z-index: 20;
+}
+
+.close-container {
+  position: absolute;
+  right: 0;
+  z-index: 30;
+  width: 10%;
+  height: 10%;
+  background: $yellow-light;
+  color: $blue-dark;
+}

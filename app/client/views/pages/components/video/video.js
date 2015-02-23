@@ -13,6 +13,12 @@ if (Meteor.isClient) {
         var queryString = view.remove({});
         console.log('clicked blkblnkt');
         return false;
+    },
+    'click .close-container' : function(event, t) {
+      event.preventDefault();
+      var view = event.target.parentNode;
+      var queryString = view.remove();
+      return false;
     }
   });
 
