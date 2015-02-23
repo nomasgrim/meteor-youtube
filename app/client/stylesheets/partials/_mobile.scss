@@ -7,7 +7,7 @@ $mq-xl  : 80em !default;
 // Both portrait and landscape
 
 @mixin xsm-vp {
-  @media screen and (max-width: $mq-xsm) {
+  @media screen and (max-width: $mq-sm) {
     @content;
   }
 }

@@ -35,21 +35,38 @@ ul {
   margin: 0;
 }
 .search-item {
-  // transition: width .5s $ease-in-out-sine;
   padding-bottom: 14.0625%;
   height: 0;
   height: 0;
   position: relative;
+  @include xsm-vp {
+    padding-bottom: 56.25%;
+  }
+  @include sm-vp {
+    padding-bottom: 28.125%;
+  }
+  @include md-vp {
+    padding-bottom: 18.5625%;
+  }
+  @include lg-vp {
+    padding-bottom: 14.0625%;
+  }
+}
+.search-item {
   &__thumbnail {
     position: relative;
     overflow:hidden;
     z-index: 5;
     img {
       width: 100%;
-      margin-top: -9.355%
+      margin-top: -9.355%;
     }
   }
+}
+.search-item {
   &__content {
+    border-radius: 10px 10px 10px 10px;
+    // border: 3px solid $yellow-dark;
     position: absolute;
     z-index: 10;
     top: 0;
@@ -58,23 +75,39 @@ ul {
     height: 200%;
     opacity: 0;
     display: none;
-    //background: rgba(61,179,255,0.7);
-    background: rgba(255,223,102,0.25);
-    background: -moz-linear-gradient(top, rgba(255,223,102,0.25) 0%, rgba(241,231,103,0.74) 54%, rgba(0,53,105,0.75) 55%, rgba(0,39,76,0.75) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,223,102,0.25)), color-stop(54%, rgba(241,231,103,0.74)), color-stop(55%, rgba(0,53,105,0.75)), color-stop(100%, rgba(0,39,76,0.75)));
-    background: -webkit-linear-gradient(top, rgba(255,223,102,0.25) 0%, rgba(241,231,103,0.74) 54%, rgba(0,53,105,0.75) 55%, rgba(0,39,76,0.75) 100%);
-    background: -o-linear-gradient(top, rgba(255,223,102,0.25) 0%, rgba(241,231,103,0.74) 54%, rgba(0,53,105,0.75) 55%, rgba(0,39,76,0.75) 100%);
-    background: -ms-linear-gradient(top, rgba(255,223,102,0.25) 0%, rgba(241,231,103,0.74) 54%, rgba(0,53,105,0.75) 55%, rgba(0,39,76,0.75) 100%);
-    background: linear-gradient(to bottom, rgba(255,223,102,0.25) 0%, rgba(241,231,103,0.74) 54%, rgba(0,53,105,0.75) 55%, rgba(0,39,76,0.75) 100%);
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    // transition: all ease-in .15s;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    color: $blue-dark;
+    //text-shadow: 1px 1px 1px $blue-dark;
+    &::before {
+      content:"\A";
+      border-style: solid;
+      border-width: 20px 25px 20px 0;
+      border-color: transparent #fff transparent transparent;
+      position: absolute;
+      left: -25px;
+      top: 10%;
+    }
   }
   @include xsm-vp {
     &:nth-child(1n+0) {
       .search-item__content {
         left: 0;
-        //right: 100%;
+        &::before {
+          content:"\A";
+          border-style: solid;
+          border-width: 20px 0 20px 25px;
+          border-color: transparent transparent transparent #fff;
+          position: absolute;
+          right: -25px;
+          left: auto;
+          top: 10%;
+        }
       }
     }
   }
@@ -82,7 +115,16 @@ ul {
     &:nth-child(2n+0) {
       .search-item__content {
         left: -100% !important;
-        //right: 100%;
+        &::before {
+          content:"\A";
+          border-style: solid;
+          border-width: 20px 0 20px 25px;
+          border-color: transparent transparent transparent #fff;
+          position: absolute;
+          left: auto;
+          right: -25px;
+          top: 10%;
+        }
       }
     }
   }
@@ -98,6 +140,16 @@ ul {
     &:nth-child(4n+0) {
       .search-item__content {
         left: -100% !important;
+        &::before {
+          content:"\A";
+          border-style: solid;
+          border-width: 20px 0 20px 25px;
+          border-color: transparent transparent transparent #fff;
+          position: absolute;
+          left: auto;
+          right: -25px;
+          top: 10%;
+        }
         //right: 100%;
       }
     }
@@ -115,6 +167,9 @@ ul {
   }
   &__details {
     h2 {
+      margin: 10px;
+    }
+    p {
       margin: 10px;
     }
   }
